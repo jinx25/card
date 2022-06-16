@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.menu a, span {
+    color: crimson;
+}
+
+.menu a:hover, .menu a:focus {
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: #f3f3f3;
+    margin: 2rem 0;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: #eeeeee;
+    margin-bottom: 5rem;
+    font-size: 0.9375rem;
+}
+
+#flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.box {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    padding: 2.5rem;
+    flex: 1 1 0px;
+    align-self: stretch;
+    width: 100%;
+}
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+button {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    outline: 0;
+    border-radius: 5rem;
+    padding: 0.7rem 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+}
+
+.sedans-btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs-btn {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury-btn {
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+@media screen and (max-width:573px) {
+    .sedan {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: unset;
+    }
+    
+    .suvs {
+        border-top-left-radius: unset;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: unset;
+    }
+    
+    .luxury {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width:404px) {
+    .sedan {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: unset;
+    }
+    
+    .suvs {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 0.5rem;
+    }
+    
+    .luxury {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width:402px) {
+    .sedan {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: unset;
+    }
+    
+    .suvs {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+    
+    .luxury {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+}
+
+/* Grid */
+
+#grid {
+    background-color:hsl(0, 2%, 36%);
+}
+
+#grid-box {
+    padding: 4rem 1rem;
+}
+
+.grid-box {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'first'
+    'second'
+    'third'
+    'fourth' 
+    'fifth';
+    gap: 1rem;
+}
+
+.jingo {
+    padding: 4rem;
+    border-radius: 0.5rem;
+}
+
+.jingo:nth-child(1) {
+    grid-area: first;
+    background-color: #7ba591;
+}
+
+.jingo:nth-child(2) {
+    grid-area: second;
+    background-color: #cc222b;
+}
+
+.jingo:nth-child(3) {
+    grid-area: third;
+    background-color: #f15b4c;
+}
+
+.jingo:nth-child(4) {
+    grid-area: fourth;
+    background-color: #faa41b;
+}
+
+.jingo:nth-child(5) {
+    grid-area: fifth;
+    background-color: cyan;
+}
+
+
+
+
+@media screen and (min-width: 420px) {
+    .grid-box { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'first first'
+        'second third'
+        'fourth third'
+        'fifth fifth';
+        gap: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    .grid-box {
+        display: grid;
+        grid-template-columns: 3fr 1fr 2fr;
+        grid-template-areas: 
+        'first first second'
+        'third fourth fourth'
+        'third fifth fifth';
+        grid-template-rows: 1.3fr 1fr 1.2fr;
+        gap: 1rem;
+    }
+}
